@@ -29,4 +29,9 @@ public class MiniCSS {
 
     public static String stop = "\u001B[0m"; //off
 
+    public static void printHL(String tekst) {
+        System.out.println(MiniCSS.kolor20 + tekst + MiniCSS.stop);
+    }
+
+
 }
