@@ -27,7 +27,7 @@ public class Title {
         user("cd pp\bhonebook\n");
         System.out.print("D:\\PHONEBOOK\\>");
 
-        user("phonn\bebooo\b\bok.exe");
+        user("phonn\bebooooo\b\b\b\bok.exe");
 
 
         System.out.print("\n\nLoading");
@@ -49,7 +49,6 @@ public class Title {
                 "##        ##     ## ##     ## ##  #### ##             ##     ## ##     ## ##     ## ##  ##   \n" +
                 "##        ##     ## ##     ## ##   ### ##             ##     ## ##     ## ##     ## ##   ##  \n" +
                 "##        ##     ##  #######  ##    ## ########       ########   #######   #######  ##    ## (c) 2020 by GP\n" + MiniCSS.stop);
-        System.out.println("Wczytaj bazę z dysku");
     }
 
     public static void user(String text) throws InterruptedException {
@@ -58,7 +57,7 @@ public class Title {
         for (int i = 0; i < text.length(); i++) {
             Thread.sleep(secureRandom.nextInt(600));
             System.out.print(text.charAt(i));
-            Thread.sleep(300);
+            Thread.sleep(100);
 
         }
 
