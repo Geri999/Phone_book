@@ -1,4 +1,14 @@
-package pl.bci.g73.itcamp.phonebook;
+package pl.bci.g73.itcamp.phonebook.gui;
+
+import pl.bci.g73.itcamp.phonebook.classes.Company;
+import pl.bci.g73.itcamp.phonebook.classes.Person;
+import pl.bci.g73.itcamp.phonebook.classes.Record;
+import pl.bci.g73.itcamp.phonebook.database.AddRecord;
+import pl.bci.g73.itcamp.phonebook.database.DeleteRecord;
+import pl.bci.g73.itcamp.phonebook.database.PhoneBookDataBase;
+import pl.bci.g73.itcamp.phonebook.methods.Find;
+import pl.bci.g73.itcamp.phonebook.methods.IO;
+import pl.bci.g73.itcamp.phonebook.methods.ShowData;
 
 import java.util.Scanner;
 
@@ -30,7 +40,7 @@ public class Menu {
         MiniCSS.printHL("DODAWANIE/KASOWANIE REKORDÓW");
         System.out.println("\t6-Dodaj firmę");
         System.out.println("\t7-Dodaj osobę fizyczną");
-        System.out.println("\t10-Usuń rekord (po nr ID na NULL) [do zrobienia]");
+        System.out.println("\t10-Usuń rekord");
         MiniCSS.printHL("OPERACJE SYSTEMOWE");
         System.out.println("\t8-(SAVE) Zapisz bazę do pliku (Baza.txt)");
         System.out.println("\t9-(OPEN) Wczytaj bazę z pliku (Baza.txt)");
@@ -46,44 +56,48 @@ public class Menu {
                 break;// nie trzeba
 
             case 1://Wyświetl całą książkę telefoniczną
-            {int counter=0;
-                for (DBRecord dbRecord : PhoneBookDataBase.getPhoneBookDataBase().getPhoneBookArray()) {
-                    if (dbRecord != null) {
-                        System.out.println(dbRecord);
+            {
+                int counter = 0;
+                for (Record record : PhoneBookDataBase.getPhoneBookDataBase().getRecordsArray()) {
+                    if (record != null) {
+                        System.out.println(record);
                         counter++;
                     }
                 }
-                if (counter==0) System.out.println("Brak pozycji");}
-                break;
+                if (counter == 0) System.out.println("Brak pozycji");
+            }
+            break;
 
-            case 2:
-            {int counter=0;
-                for (DBRecord dbRecord : PhoneBookDataBase.getPhoneBookDataBase().getPhoneBookArray()) {
-                    if (dbRecord != null && dbRecord.getType().equals("Company")) {
-                        System.out.println(dbRecord);
+            case 2: {
+                int counter = 0;
+                for (Record record : PhoneBookDataBase.getPhoneBookDataBase().getRecordsArray()) {
+                    if (record != null && record instanceof Company) {
+                        System.out.println(record);
                         counter++;
                     }
                 }
-                if (counter==0) System.out.println("Brak pozycji");}
-                break;
+                if (counter == 0) System.out.println("Brak pozycji");
+            }
+            break;
 
-            case 3:
-            { int counter=0;
-                for (DBRecord dbRecord : PhoneBookDataBase.getPhoneBookDataBase().getPhoneBookArray()) {
-                    if (dbRecord != null && dbRecord.getType().equals("Person")) {
-                        System.out.println(dbRecord);
+            case 3: {
+                int counter = 0;
+                for (Record record : PhoneBookDataBase.getPhoneBookDataBase().getRecordsArray()) {
+                    if (record != null && record instanceof Person) {
+                        System.out.println(record);
                         counter++;
                     }
                 }
-                if (counter==0) System.out.println("Brak pozycji");}
-                break;
+                if (counter == 0) System.out.println("Brak pozycji");
+            }
+            break;
 
             case 4:
-                FindAndShow.findAndShow("Company");
+                ShowData.showData(Find.find("Company"));
                 break;
 
             case 5:
-                FindAndShow.findAndShow("Personal");
+                ShowData.showData(Find.find("Person"));
                 break;
 
             case 6:
@@ -94,12 +108,16 @@ public class Menu {
                 AddRecord.addRecord("Person");
                 break;
 
+            case 10: //kasowanie rekordu
+                DeleteRecord.deleteRecord();
+                break;
+
             case 8: //zapis
-                IO.saveFile(PhoneBookDataBase.getPhoneBookDataBase().getPhoneBookArray(), "Baza.txt");
+                IO.saveFile(PhoneBookDataBase.getPhoneBookDataBase().getRecordsArray(), "Baza.txt");
                 break;
 
             case 9: //odczyt
-                PhoneBookDataBase.getPhoneBookDataBase().setPhoneBookArray(IO.openFile("Baza.txt"));
+                PhoneBookDataBase.getPhoneBookDataBase().setRecordsArray(IO.openFile("Baza.txt"));
                 break;
 
             default:

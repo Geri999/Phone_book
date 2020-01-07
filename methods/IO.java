@@ -1,4 +1,6 @@
-package pl.bci.g73.itcamp.phonebook;
+package pl.bci.g73.itcamp.phonebook.methods;
+
+import pl.bci.g73.itcamp.phonebook.classes.Record;
 
 import java.io.*;
 
@@ -10,7 +12,7 @@ import java.io.*;
  */
 public class IO {
 
-    public static void saveFile(DBRecord[] tablica, String plik) {
+    public static void saveFile(Record[] tablica, String plik) {
         try {
             FileOutputStream fos = new FileOutputStream(plik);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -25,12 +27,12 @@ public class IO {
     }
 
 
-    public static DBRecord[] openFile(String plik) {
-        DBRecord[] dbRecords;
+    public static Record[] openFile(String plik) {
+        Record[] dbRecords;
         try {
             FileInputStream fis = new FileInputStream(plik);
             ObjectInputStream ois = new ObjectInputStream(fis);
-            dbRecords = (DBRecord[]) ois.readObject();
+            dbRecords = (Record[]) ois.readObject();
             ois.close();
 
         } catch (IOException | ClassNotFoundException e) {

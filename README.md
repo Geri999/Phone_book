@@ -1,3 +1,7 @@
 # phone_book
 Zadanie 2
-Założenia: dziedziczenia w wersji „akademickiej”, bo lepiej i czytelniej chyba jest mieć dwie bazy: companys i persons - obie na siłę dziedziczące po  klasie „address” (dla nich były by osobne metody bo zakres pól jest inny). A teraz jest ciąg: ID->adres->person->company.
+Założenia:
+- klasa Record to podstawowa jednostka - klasa rekordu w bazie, kadzy rekord w bazie musi po niej dziedziczyć
+- klasa Address (adres+tel.) - to wspólny element kazdego rekordu w bazie książka telefoniczna
+- klasa person i company (i ewentulanie inne) to pochodne "adresu" w ksiązce tel. z dodatkami (polami) specyficznymi dla danej
+ klasy.

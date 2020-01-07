@@ -1,4 +1,4 @@
-package pl.bci.g73.itcamp.phonebook;
+package pl.bci.g73.itcamp.phonebook.classes;
 
 /**
  * @description:
@@ -9,19 +9,17 @@ package pl.bci.g73.itcamp.phonebook;
 public class Person extends Address {
     private String name;
     private String surname;
-    private int mobile;
+    private int mobile; //telefon "osobisty"
 
     //konstruktor
-    public Person(String address, String landlinePhone, String name, String surname,int mobile) {
-        super(address, landlinePhone);
+    public Person(String type, String address, String landlinePhone, String name, String surname, int mobile) {
+        super(type, address, landlinePhone);
         this.name = name;
         this.surname = surname;
         this.mobile = mobile;
     }
 
     //gettery i settery
-
-
     public String getName() {
         return name;
     }
@@ -37,10 +35,12 @@ public class Person extends Address {
     //metody
     @Override
     public String toString() {
-        return new StringBuilder("ID=").append(getIdDBPhoneBook())
+        return new StringBuilder(super.toString())
                 .append(", Person=[")
                 .append(name).append(" ").append(surname)
                 .append(", tel.")
-                .append(mobile).append("]").toString();
+                .append(mobile).append("]")
+                .append("\n-----------------------------------------------------------------------------------------")
+                .toString();
     }
 }
