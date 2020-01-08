@@ -10,9 +10,11 @@ import pl.bci.g73.itcamp.phonebook.gui.Title;
  * @version: 1.00
  */
 public class AppPhoneBook {
+    public static final String VERSION = "ver.1.04";
+
     public static void main(String[] args) throws InterruptedException {
 
-        //Title.castBajer();  //pamiętaj by zaremować(zakomentować), bo potem może wkurzać :-)
+        Title.castBajer();  //pamiętaj by zaremować(zakomentować), bo potem może wkurzać :-)
         Title.castTitle();
         Menu.petla();
 

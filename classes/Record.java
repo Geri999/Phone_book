@@ -15,7 +15,7 @@ public class Record implements Serializable {
     //pola
     private static int idMax = 0;  // licznik rekordów
     private int idRecord;
-    private String type; //np. Person lub Company (todo: zmienić na enum)
+    private String type; //np. Person lub Company
 
     //konstruktor
     public Record(String type) {

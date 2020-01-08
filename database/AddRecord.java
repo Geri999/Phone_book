@@ -42,7 +42,7 @@ public class AddRecord {
             String name = sc.nextLine();
             System.out.println("Surname:");
             String surname = sc.nextLine();
-            System.out.println("Mobile:");
+            System.out.println("Mobile (int!!):");
             int mobile = sc.nextInt();
 
             PhoneBookDataBase.getPhoneBookDataBase().getRecordsArray()[Record.getIdMax()] =

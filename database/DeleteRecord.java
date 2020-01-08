@@ -12,25 +12,22 @@ public class DeleteRecord {
         System.out.println("Pierwszy rekord ma nr \"0\"");
         System.out.println("Podaj ID rekordu do skasowania");
         int rekordToDelete = sc.nextInt();
-        sc.nextLine(); //kosnumcja "entera"
+        sc.nextLine(); //"konsumcja" [entera]
 
 // szukam w tablicy nr tego ID (bo nie muszą być po kolei, bo może to być kolejne kasowanie)
         Record[] temp = PhoneBookDataBase.getPhoneBookDataBase().getRecordsArray();
-
+        boolean success=false;
         for (int i = 0; i < temp.length; i++) {
 
-            if (temp[i] != null && temp[i].getIdRecord() == rekordToDelete) {
+            if (temp[i] != null && (temp[i].getIdRecord() == rekordToDelete)) {
 
                 for (int j = i; j < temp.length - 1; j++) {
                     temp[j] = temp[j + 1];
                     temp[temp.length - 1] = null;
+                    success=true;
                 }
-
-            } else {
-                System.out.println("Niestety operacja nieudana, brak takiego ID");
             }
-
         }
-
+        System.out.println((success==true)?"Rekord skasowany (nawet pusty)":"Niestety operacja nieudana, brak takiego ID");
     }
 }

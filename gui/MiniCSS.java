@@ -33,5 +33,9 @@ public class MiniCSS {
         System.out.println(MiniCSS.kolor20 + tekst + MiniCSS.stop);
     }
 
+    public static String printHLc(String tekst) {
+        return MiniCSS.kolor20 + tekst + MiniCSS.stop;
+    }
+
 
 }

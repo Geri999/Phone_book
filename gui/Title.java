@@ -1,5 +1,7 @@
 package pl.bci.g73.itcamp.phonebook.gui;
 
+import pl.bci.g73.itcamp.phonebook.AppPhoneBook;
+
 import java.security.SecureRandom;
 
 /**
@@ -48,7 +50,7 @@ public class Title {
                 "########  ######### ##     ## ## ## ## ######         ########  ##     ## ##     ## #####    \n" +
                 "##        ##     ## ##     ## ##  #### ##             ##     ## ##     ## ##     ## ##  ##   \n" +
                 "##        ##     ## ##     ## ##   ### ##             ##     ## ##     ## ##     ## ##   ##  \n" +
-                "##        ##     ##  #######  ##    ## ########       ########   #######   #######  ##    ## (c) 2020 by GP\n" + MiniCSS.stop);
+                "##        ##     ##  #######  ##    ## ########       ########   #######   #######  ##    ## (c) 2020 by GP\n" + MiniCSS.stop+ AppPhoneBook.VERSION);
     }
 
     public static void user(String text) throws InterruptedException {
