@@ -32,7 +32,7 @@ public class Company extends Address implements Serializable {
     @Override
     public String toString() {
         return new StringBuilder(super.toString())
-                .append(", Company=[Firma:")
+                .append(",\n\t\tCompany=[Firma:")
                 .append(companyName).append(", NIP:")
                 .append(nip).append("]")
                 .append("\n-----------------------------------------------------------------------------------------")

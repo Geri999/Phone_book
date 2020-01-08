@@ -37,7 +37,7 @@ public  class Address extends Record implements Serializable {
         sb.append(super.toString())
         .append(",\n\t\t[Adres:").append(address).append("]");
 
-        if (landlinePhone.equals("")) {
+        if (!landlinePhone.equals("")) {
             sb.append(", [tel. stacjonarny:").append(landlinePhone).append("]");
         }
         return sb.toString();

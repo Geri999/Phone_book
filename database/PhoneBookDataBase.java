@@ -30,7 +30,7 @@ public class PhoneBookDataBase {
                 "505-500-500", "Optimus", "333");
 
         recordsArray[3] = new Person("Person","31-145 Katowice, ul. Słowackiego 5",
-                "444-444-444","Tomasz","Nowak", 505-111-111);
+                "444-444-444","Tomasz","Nowak", 505111111);
     }
     //gettery i settery
     //todo: return phoneBookDataBase czy PhoneBookDataBase.phoneBookDataBase ??

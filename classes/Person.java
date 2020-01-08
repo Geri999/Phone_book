@@ -36,7 +36,7 @@ public class Person extends Address {
     @Override
     public String toString() {
         return new StringBuilder(super.toString())
-                .append(", Person=[")
+                .append(",\n\t\tPerson=[")
                 .append(name).append(" ").append(surname)
                 .append(", tel.")
                 .append(mobile).append("]")

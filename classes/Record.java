@@ -38,7 +38,7 @@ public class Record implements Serializable {
 
     @Override
     public String toString() {
-        return new StringBuilder("Record=")
+        return new StringBuilder("ID=")
                 .append(idRecord)
                 .append(MiniCSS.kolor3 + "\t(Typ:").append(type).append(")" + MiniCSS.stop)
                 .toString();
