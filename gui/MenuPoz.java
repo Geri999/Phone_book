@@ -2,7 +2,7 @@ package pl.bci.g73.itcamp.phonebook.gui;
 
 import pl.bci.g73.itcamp.phonebook.errors.BadMenuPositionException;
 
-public enum MenuPoz { //todo: dokonczyć
+public enum MenuPoz {
 
     SHOW_HL("WYSWIETLANIE", "HL", 0, 100),
     SHOW_ALL("Wyświetl całą książkę telefoniczną", "N", 1, 1),
