@@ -32,27 +32,6 @@ public class Menu {
         }
     }
 
-//    public static void showMenu() {
-//        System.out.println("\n***************** M E N U ********************");
-//        MiniCSS.printHL("WYSWIETLANIE");
-//        System.out.println("\t1-Wyświetl całą książkę telefoniczną");
-//        System.out.println("\t2-Wyświetl firmy");
-//        System.out.println("\t3-Wyświetl osoby fizyczne");
-//        MiniCSS.printHL("WYSZUKIWANIE");
-//        System.out.println("\t4-Wyszukaj firmę");
-//        System.out.println("\t5-Wyszukaj osobę fizyczną");
-//        MiniCSS.printHL("DODAWANIE/KASOWANIE REKORDÓW");
-//        System.out.println("\t6-Dodaj firmę");
-//        System.out.println("\t7-Dodaj osobę fizyczną");
-//        System.out.println("\t10-Usuń rekord");
-//        MiniCSS.printHL("OPERACJE SYSTEMOWE");
-//        System.out.println("\t8-(SAVE) Zapisz bazę do pliku (Baza.txt)");
-//        System.out.println("\t9-(OPEN) Wczytaj bazę z pliku (Baza.txt)");
-//        System.out.println("\t0-Exit");
-//        System.out.println("**********************************************");
-//        System.out.println("Wybierz pozycję i naciśnij [ENTER]");
-//    }
-
     public static void menuPositionAction() {
 
         MenuPoz menuPoz = null;
