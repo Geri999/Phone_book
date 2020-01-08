@@ -1,4 +1,4 @@
-package pl.bci.g73.itcamp.phonebook.gui;
+package phonebook.gui;
 
 public class ShowMenuAutomat { //klasa ta służy do nauki programowania bo jest zbyt.... akademicka
 

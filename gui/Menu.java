@@ -1,20 +1,20 @@
-package pl.bci.g73.itcamp.phonebook.gui;
+package phonebook.gui;
 
-import pl.bci.g73.itcamp.phonebook.classes.Company;
-import pl.bci.g73.itcamp.phonebook.classes.Person;
-import pl.bci.g73.itcamp.phonebook.classes.Record;
-import pl.bci.g73.itcamp.phonebook.database.AddRecord;
-import pl.bci.g73.itcamp.phonebook.database.DeleteRecord;
-import pl.bci.g73.itcamp.phonebook.database.PhoneBookDataBase;
-import pl.bci.g73.itcamp.phonebook.errors.BadMenuPositionException;
-import pl.bci.g73.itcamp.phonebook.methods.Find;
-import pl.bci.g73.itcamp.phonebook.methods.IO;
-import pl.bci.g73.itcamp.phonebook.methods.ShowData;
+import phonebook.classes.Company;
+import phonebook.classes.Person;
+import phonebook.classes.Record;
+import phonebook.database.AddRecord;
+import phonebook.database.DeleteRecord;
+import phonebook.database.PhoneBookDataBase;
+import phonebook.errors.BadMenuPositionException;
+import phonebook.methods.Find;
+import phonebook.methods.IO;
+import phonebook.methods.ShowData;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static pl.bci.g73.itcamp.phonebook.gui.ShowMenuAutomat.MenuPozShowMenu;
+import static phonebook.gui.ShowMenuAutomat.MenuPozShowMenu;
 
 /**
  * @description:

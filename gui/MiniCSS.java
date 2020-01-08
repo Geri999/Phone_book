@@ -1,4 +1,4 @@
-package pl.bci.g73.itcamp.phonebook.gui;
+package phonebook.gui;
 
 /**
  * @description:

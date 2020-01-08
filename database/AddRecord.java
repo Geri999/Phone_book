@@ -1,8 +1,8 @@
-package pl.bci.g73.itcamp.phonebook.database;
+package phonebook.database;
 
-import pl.bci.g73.itcamp.phonebook.classes.Company;
-import pl.bci.g73.itcamp.phonebook.classes.Person;
-import pl.bci.g73.itcamp.phonebook.classes.Record;
+import phonebook.classes.Company;
+import phonebook.classes.Person;
+import phonebook.classes.Record;
 
 import java.util.Scanner;
 

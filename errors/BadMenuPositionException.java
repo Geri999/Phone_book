@@ -1,4 +1,4 @@
-package pl.bci.g73.itcamp.phonebook.errors;
+package phonebook.errors;
 
 public class BadMenuPositionException extends Exception {
 

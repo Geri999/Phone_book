@@ -1,6 +1,6 @@
-package pl.bci.g73.itcamp.phonebook.classes;
+package phonebook.classes;
 
-import pl.bci.g73.itcamp.phonebook.gui.MiniCSS;
+import phonebook.gui.MiniCSS;
 
 import java.io.Serializable;
 

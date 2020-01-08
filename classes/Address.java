@@ -1,4 +1,4 @@
-package pl.bci.g73.itcamp.phonebook.classes;
+package phonebook.classes;
 
 import java.io.Serializable;
 

@@ -1,10 +1,10 @@
-package pl.bci.g73.itcamp.phonebook.methods;
+package phonebook.methods;
 
-import pl.bci.g73.itcamp.phonebook.classes.Company;
-import pl.bci.g73.itcamp.phonebook.classes.Person;
-import pl.bci.g73.itcamp.phonebook.classes.Record;
-import pl.bci.g73.itcamp.phonebook.database.PhoneBookDataBase;
-import pl.bci.g73.itcamp.phonebook.gui.MiniCSS;
+import phonebook.classes.Company;
+import phonebook.classes.Person;
+import phonebook.classes.Record;
+import phonebook.database.PhoneBookDataBase;
+import phonebook.gui.MiniCSS;
 
 import java.util.Scanner;
 

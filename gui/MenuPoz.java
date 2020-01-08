@@ -1,6 +1,6 @@
-package pl.bci.g73.itcamp.phonebook.gui;
+package phonebook.gui;
 
-import pl.bci.g73.itcamp.phonebook.errors.BadMenuPositionException;
+import phonebook.errors.BadMenuPositionException;
 
 public enum MenuPoz {
 

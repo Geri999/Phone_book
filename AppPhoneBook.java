@@ -1,7 +1,7 @@
-package pl.bci.g73.itcamp.phonebook;
+package phonebook;
 
-import pl.bci.g73.itcamp.phonebook.gui.Menu;
-import pl.bci.g73.itcamp.phonebook.gui.Title;
+import phonebook.gui.Menu;
+import phonebook.gui.Title;
 
 /**
  * @description:

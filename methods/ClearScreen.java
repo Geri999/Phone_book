@@ -1,4 +1,4 @@
-package pl.bci.g73.itcamp.phonebook.methods;
+package phonebook.methods;
 
 public class ClearScreen {
 

@@ -1,6 +1,6 @@
-package pl.bci.g73.itcamp.phonebook.database;
+package phonebook.database;
 
-import pl.bci.g73.itcamp.phonebook.classes.Record;
+import phonebook.classes.Record;
 
 import java.util.Scanner;
 

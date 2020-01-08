@@ -1,6 +1,6 @@
-package pl.bci.g73.itcamp.phonebook.methods;
+package phonebook.methods;
 
-import pl.bci.g73.itcamp.phonebook.classes.Record;
+import phonebook.classes.Record;
 
 public class ShowData {
     public static void showData(Record[] record) {

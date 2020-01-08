@@ -1,6 +1,6 @@
-package pl.bci.g73.itcamp.phonebook.gui;
+package phonebook.gui;
 
-import pl.bci.g73.itcamp.phonebook.AppPhoneBook;
+import phonebook.AppPhoneBook;
 
 import java.security.SecureRandom;
 
