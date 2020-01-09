@@ -11,6 +11,7 @@ import phonebook.methods.Find;
 import phonebook.methods.IO;
 import phonebook.methods.ShowData;
 
+import java.io.File;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -34,6 +35,7 @@ public class Menu {
 
     public static void menuPositionAction() {
 
+        String plik = (new File("").getAbsolutePath()+"\\src\\phonebook\\baza_pb.txt").toString();
         MenuPoz menuPoz = null;
         boolean error = true;
         while (error) {
@@ -111,11 +113,11 @@ public class Menu {
                 break;
 
             case SAVE: //zapis
-                IO.saveFile(PhoneBookDataBase.getPhoneBookDataBase().getRecordsArray(), "Baza.txt");
+                IO.saveFile(PhoneBookDataBase.getPhoneBookDataBase().getRecordsArray(), plik);
                 break;
 
             case OPEN: //odczyt
-                PhoneBookDataBase.getPhoneBookDataBase().setRecordsArray(IO.openFile("Baza.txt"));
+                PhoneBookDataBase.getPhoneBookDataBase().setRecordsArray(IO.openFile(plik));
                 break;
 
             default:

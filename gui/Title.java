@@ -39,10 +39,9 @@ public class Title {
         }
         System.out.println("ok, I'm just kidding   :-)\n\n\n\n\n");
 
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
-        public static void castTitle(){
-
+        public static void castTitle() throws InterruptedException {
         System.out.println(MiniCSS.kolor2 + "########  ##     ##  #######  ##    ## ########       ########   #######   ####### " +
                 " ##    ## \n" +
                 "##     ## ##     ## ##     ## ###   ## ##             ##     ## ##     ## ##     ## ##   ##  \n" +
@@ -51,7 +50,8 @@ public class Title {
                 "##        ##     ## ##     ## ##  #### ##             ##     ## ##     ## ##     ## ##  ##   \n" +
                 "##        ##     ## ##     ## ##   ### ##             ##     ## ##     ## ##     ## ##   ##  \n" +
                 "##        ##     ##  #######  ##    ## ########       ########   #######   #######  ##    ## (c) 2020 by GP\n" + MiniCSS.stop+ AppPhoneBook.VERSION);
-    }
+            Thread.sleep(1000);
+        }
 
     public static void user(String text) throws InterruptedException {
         SecureRandom secureRandom = new SecureRandom();
