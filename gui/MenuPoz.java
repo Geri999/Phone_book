@@ -16,8 +16,8 @@ public enum MenuPoz {
     ADD_PERS("Dodaj osobę fizyczną", "N", 9, 7),
     DEL("Usuń rekord", "N", 10, 10),
     OPER_SYS_HL("OPERACJE SYSTEMOWE", "HL", 11, 100),
-    SAVE("(SAVE) Zapisz bazę do pliku (Baza.txt)", "N", 12, 8),
-    OPEN("(OPEN) Wczytaj bazę z pliku (Baza.txt)", "N", 13, 9),
+    SAVE("(SAVE) Zapisz bazę do pliku (baza_pb.txt)", "N", 12, 8),
+    OPEN("(OPEN) Wczytaj bazę z pliku (baza_pb.txt)", "N", 13, 9),
     EXIT("Exit", "N", 14, 0);
 
     String description;

@@ -17,7 +17,7 @@ public class FrameGenerator {
         for (String s : wsad) if (s.length() > max) max = s.length();
 
         //Title modyfications
-        String extra = (title.length() % 2 == 1) ? "  " : "";
+        String extra = (title.length() % 2 == 1) ? " " : "";
 
 
         final StringBuilder sb = new StringBuilder();
@@ -47,7 +47,7 @@ public class FrameGenerator {
 
         //ostatnia linia
         sb.append(leftDown)
-                .append(multi1(line, max + 4 + title.length()))
+                .append(multi1(line, max + 2 + extra.length() + title.length()))
                 .append(rightDown);
 
         //koniec
