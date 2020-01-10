@@ -14,7 +14,7 @@ public class AppPhoneBook {
 
     public static void main(String[] args) throws InterruptedException {
 
-       // Title.castBajer();  //pamiętaj by zaremować(zakomentować), bo potem może wkurzać :-)
+        Title.castBajer();  //pamiętaj by zaremować(zakomentować), bo potem może wkurzać :-)
         Title.castTitle();
         Menu.petla();
 
