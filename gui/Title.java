@@ -29,7 +29,7 @@ public class Title {
         user("cd pp\bhonebook\n");
         System.out.print("D:\\PHONEBOOK\\>");
 
-        user("phonn\bebooooo\b\b\b\bok.exe");
+        user("phonn\bebooooo\b\b\bk.exe");
 
 
         System.out.print("\n\nLoading");
@@ -55,11 +55,9 @@ public class Title {
 
     public static void user(String text) throws InterruptedException {
         SecureRandom secureRandom = new SecureRandom();
-        Thread.sleep(50);
         for (int i = 0; i < text.length(); i++) {
-            Thread.sleep(secureRandom.nextInt(600));
+            Thread.sleep(secureRandom.nextInt(600)+100);
             System.out.print(text.charAt(i));
-            Thread.sleep(100);
 
         }
 

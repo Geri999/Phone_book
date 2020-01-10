@@ -1,6 +1,7 @@
 package phonebook.database;
 
 import phonebook.classes.Record;
+import phonebook.gui.MiniCSS;
 
 import java.util.Scanner;
 
@@ -28,6 +29,8 @@ public class DeleteRecord {
                 }
             }
         }
-        System.out.println((success==true)?"Rekord skasowany (nawet pusty)":"Niestety operacja nieudana, brak takiego ID");
+        System.out.println((success==true)?
+                MiniCSS.printOK("Rekord skasowany (nawet pusty)"):
+                MiniCSS.printERROR("Niestety operacja nieudana, brak takiego ID: "+rekordToDelete));
     }
 }

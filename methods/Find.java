@@ -41,7 +41,7 @@ public class Find {
 
 
         if (i == 0) {
-            System.out.println(MiniCSS.kolor1 + "brak rekordów" + MiniCSS.stop);
+            System.out.println(MiniCSS.printERROR("Brak rekordów"));
             return null;
         } else {
             return temp;

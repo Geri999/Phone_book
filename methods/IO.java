@@ -1,6 +1,7 @@
 package phonebook.methods;
 
 import phonebook.classes.Record;
+import phonebook.gui.MiniCSS;
 
 import java.io.*;
 
@@ -19,9 +20,9 @@ public class IO {
             oos.writeObject(tablica);
             oos.flush();
             oos.close();
-            System.out.println("Tablica zapisana");
+            System.out.println(MiniCSS.printOK("Tablica zapisana "));
         } catch (IOException e) {
-            System.err.println("ERROR SAVE");
+            System.out.println(MiniCSS.printERROR("ERROR SAVE"));
             e.printStackTrace();
         }
     }
@@ -34,9 +35,9 @@ public class IO {
             ObjectInputStream ois = new ObjectInputStream(fis);
             dbRecords = (Record[]) ois.readObject();
             ois.close();
-
+            System.out.println(MiniCSS.printOK("Baza wczytana poprawnie "));
         } catch (IOException | ClassNotFoundException e) {
-            System.err.println("Nie udało się odczytać pliku");
+            System.out.println(MiniCSS.printERROR("Nie udało się odczytać pliku"));
             e.printStackTrace();
             return null;
         }

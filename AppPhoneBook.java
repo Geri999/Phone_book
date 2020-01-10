@@ -10,11 +10,11 @@ import phonebook.gui.Title;
  * @version: 1.00
  */
 public class AppPhoneBook {
-    public static final String VERSION = "ver.1.04";
+    public static final String VERSION = "ver.1.05";
 
     public static void main(String[] args) throws InterruptedException {
 
-       // Title.castBajer();  //pamiêtaj by zaremowaæ(zakomentowaæ), bo potem mo¿e wkurzaæ :-)
+       // Title.castBajer();  //pamiÄ™taj by zaremowaÄ‡(zakomentowaÄ‡), bo potem moÅ¼e wkurzaÄ‡ :-)
         Title.castTitle();
         Menu.petla();
 

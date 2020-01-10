@@ -15,8 +15,6 @@ import java.io.File;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static phonebook.gui.ShowMenuAutomat.MenuPozShowMenu;
-
 /**
  * @description:
  * @author: Gerard
@@ -28,7 +26,7 @@ public class Menu {
 
     public static void petla() {
         while (true) {
-            MenuPozShowMenu();
+            ShowMenuAutomat2.MenuPozShowMenu();
             menuPositionAction();
         }
     }
@@ -41,12 +39,13 @@ public class Menu {
         while (error) {
             try {
                 menuPoz = MenuPoz.searchByKey(sc.nextInt());
-                if (menuPoz == null) throw new BadMenuPositionException("Nie ma takiej pozycji.\nWybierz jeszcze raz.");
+                if (menuPoz == null) throw new BadMenuPositionException(MiniCSS.printERROR("Nie ma takiej pozycji.\nWybierz " +
+                        "jeszcze raz."));
                 error = false;
             } catch (BadMenuPositionException e) {
                 System.out.println(e.getMessage());
             } catch (InputMismatchException e) {
-                System.out.println("Tylko cyfry!!\nWybierz jeszcze raz.");
+                System.out.println(MiniCSS.printERROR("Tylko cyfry!!\nWybierz jeszcze raz."));
                 sc.nextLine();//czyszczenie bufora z [entera]
             }
         }
@@ -64,7 +63,7 @@ public class Menu {
                         counter++;
                     }
                 }
-                if (counter == 0) System.out.println("Brak pozycji");
+                if (counter == 0) System.out.println(MiniCSS.printERROR("Brak pozycji"));
             }
             break;
 
@@ -76,7 +75,7 @@ public class Menu {
                         counter++;
                     }
                 }
-                if (counter == 0) System.out.println("Brak pozycji");
+                if (counter == 0) System.out.println(MiniCSS.printERROR("Brak pozycji"));
             }
             break;
 
@@ -88,7 +87,7 @@ public class Menu {
                         counter++;
                     }
                 }
-                if (counter == 0) System.out.println("Brak pozycji");
+                if (counter == 0) System.out.println(MiniCSS.printERROR("Brak pozycji"));
             }
             break;
 

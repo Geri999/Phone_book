@@ -26,6 +26,8 @@ public class MiniCSS {
     public static String kolor17 = "\u001B[47m"; //BG - gray
 
     public static String kolor20 = "\u001B[30m\u001B[44m"; //white & BG - blue
+    public static String kolor21 = "\u001B[30m\033[0;101m"; //white & BG - red
+    public static String kolor22 = "\033[0;102m \033[1;90m"; //white & BG - blue
 
     public static String stop = "\u001B[0m"; //off
 
@@ -33,9 +35,9 @@ public class MiniCSS {
         System.out.println(MiniCSS.kolor20 + tekst + MiniCSS.stop);
     }
 
-    public static String printHLc(String tekst) {
-        return MiniCSS.kolor20 + tekst + MiniCSS.stop;
-    }
+    public static String printHLc(String tekst) { return MiniCSS.kolor20 + tekst + MiniCSS.stop;}
+    public static String printERROR(String tekst) { return MiniCSS.kolor21 + tekst + MiniCSS.stop;}
+    public static String printOK(String tekst) { return MiniCSS.kolor22 + tekst + MiniCSS.stop;}
 
 
 }
