@@ -1,4 +1,4 @@
-# phone_book ver.1.05
+# phone_book ver.1.06
  Założenia:
 - klasa Record to podstawowa jednostka - klasa rekordu w bazie, każdy rekord w bazie musi po niej dziedziczyć
 - klasa Address (adres+tel.) - to wspólny element każdego rekordu w bazie książka telefoniczna
