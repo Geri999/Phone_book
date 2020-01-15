@@ -1,9 +1,9 @@
-package phonebook.methods;
+package phonebook.gui;
 
-import phonebook.classes.Record;
-import phonebook.gui.MiniCSS;
+import phonebook.model.Record;
 
 import java.io.*;
+import java.util.List;
 
 /**
  * @description:
@@ -13,30 +13,49 @@ import java.io.*;
  */
 public class IO {
 
-    public static void saveFile(Record[] tablica, String plik) {
+    static void saveFile(List<Record> tablica, String plik) {
         try {
             FileOutputStream fos = new FileOutputStream(plik);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(tablica);
             oos.flush();
             oos.close();
+
+            System.out.print("Saving");
+            for (int i = 0; i < 15; i++) {
+                System.out.print(".");
+                Thread.sleep(100);
+            }
+            System.out.println();
+
+
             System.out.println(MiniCSS.printOK("Tablica zapisana "));
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             System.out.println(MiniCSS.printERROR("ERROR SAVE"));
             e.printStackTrace();
         }
     }
 
 
-    public static Record[] openFile(String plik) {
-        Record[] dbRecords;
+    static List<Record> openFile(String plik) {
+        List<Record> dbRecords;
         try {
             FileInputStream fis = new FileInputStream(plik);
             ObjectInputStream ois = new ObjectInputStream(fis);
-            dbRecords = (Record[]) ois.readObject();
+            dbRecords = (List<Record>) ois.readObject();
             ois.close();
+
+            System.out.print("Loading");
+            for (int i = 0; i < 15; i++) {
+                System.out.print(".");
+                Thread.sleep(100);
+            }
+            System.out.println();
+
+
+
             System.out.println(MiniCSS.printOK("Baza wczytana poprawnie "));
-        } catch (IOException | ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException | InterruptedException e) {
             System.out.println(MiniCSS.printERROR("Nie udało się odczytać pliku"));
             e.printStackTrace();
             return null;

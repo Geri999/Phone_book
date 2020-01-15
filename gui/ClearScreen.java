@@ -1,8 +1,8 @@
-package phonebook.methods;
+package phonebook.gui;
 
 public class ClearScreen {
 
-    public static void clearScreen() //ok, w inteliJ nie działa
+    static void clearScreen() //ok, w inteliJ nie działa
     {
         try {
             final String os = System.getProperty("os.name");

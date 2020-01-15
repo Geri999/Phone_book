@@ -1,10 +1,11 @@
-package phonebook.methods;
+package phonebook.gui;
 
-import phonebook.classes.Record;
-import phonebook.gui.MiniCSS;
+import phonebook.model.Record;
 
-public class ShowData {
-    public static void showData(Record[] record) {
+import java.util.List;
+
+ class ShowData {
+    public static void showData(List<Record> record) {
         int counter = 0;
 
         if (record != null) {

@@ -1,8 +1,11 @@
 package phonebook.database;
 
-import phonebook.classes.Company;
-import phonebook.classes.Person;
-import phonebook.classes.Record;
+import phonebook.model.Company;
+import phonebook.model.Person;
+import phonebook.model.Record;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @description:
@@ -14,37 +17,35 @@ public class PhoneBookDataBase {
     //singleton
     private static final PhoneBookDataBase phoneBookDataBase = new PhoneBookDataBase();
 
-    //książka tel. z 15 rekordami
-    private Record[] recordsArray = new Record[15];
+    //baza
+    private List<Record> recordsArray = new ArrayList<>();
 
-    //konstruktor
-    //tworzy zalążek bazy, pare rekordów, po testach usuń i trzeba wczytać bazę az dysku)
+    //konstruktor, tworzy zalążek bazy
     public PhoneBookDataBase() {
-        recordsArray[0] = new Company("Company","31-142 Kraków, ul. Mickiewicza 54",
-                "501-100-200", "Comarch", "111");
+        recordsArray.add(new Company("Company","31-142 Kraków, ul. Mickiewicza 54",
+                "501-100-200", "Comarch", "111"));
 
-        recordsArray[1] = new Company("Company","31-142 Kraków, ul. Słowackiego 54",
-                "506-100-200", "Prokom", "222");
+        recordsArray.add(new Company("Company","31-142 Kraków, ul. Słowackiego 54",
+                "506-100-200", "Prokom", "222"));
 
-        recordsArray[2] = new Company("Company","31-142 Kraków, ul. Miłosza 54",
-                "505-500-500", "Optimus", "333");
+        recordsArray.add(new Company("Company","31-142 Kraków, ul. Miłosza 54",
+                "505-500-500", "Optimus", "333"));
 
-        recordsArray[3] = new Person("Person","31-145 Katowice, ul. Słowackiego 5",
-                "444-444-444","Tomasz","Nowak", 505111111);
+        recordsArray.add(new Person("Person","31-145 Katowice, ul. Słowackiego 5",
+                "444-444-444","Tomasz","Nowak", 505111111));
     }
-    //gettery i settery
-    //todo: return phoneBookDataBase czy PhoneBookDataBase.phoneBookDataBase ??
+    //dostep do tej klasy/obiektu w ramach sigletonu
     public static PhoneBookDataBase getPhoneBookDataBase() {
-        return phoneBookDataBase;
+        return PhoneBookDataBase.phoneBookDataBase;
     }
 
-    //zwraca tablice rekordów (15 szt. w tym nulle)
-    public Record[] getRecordsArray() {
+    //zwraca ArrayList rekordów (getter)
+    public List<Record> getRecordsArray() {
         return recordsArray;
     }
 
-    //podmienia tablice rekordów (15 szt.) używana do wczytywania z dysku
-    public void setRecordsArray(Record[] recordsArray) {
+    //setter dla głównej bazy ArrayList -  używana do wczytywania z dysku
+    public void setRecordsArray(List<Record> recordsArray) {
         this.recordsArray = recordsArray;
     }
 }

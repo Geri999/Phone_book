@@ -1,8 +1,6 @@
 package phonebook.gui;
 
-import phonebook.errors.BadMenuPositionException;
-
-public enum MenuPoz {
+ enum MenuPoz {
 
     SHOW_HL("WYSWIETLANIE", "HL", 0, 100),
     SHOW_ALL("Wyświetl całą książkę telefoniczną", "N", 1, 1),
@@ -32,7 +30,7 @@ public enum MenuPoz {
         this.key = key;
     }
 
-    public static MenuPoz searchByKey(int key) throws BadMenuPositionException {
+    public static MenuPoz searchByKey(int key)  { //static!
         for (MenuPoz value : MenuPoz.values()) {
             if (value.key==key) {return value;}
         }

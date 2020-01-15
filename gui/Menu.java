@@ -1,15 +1,13 @@
 package phonebook.gui;
 
-import phonebook.classes.Company;
-import phonebook.classes.Person;
-import phonebook.classes.Record;
+import phonebook.model.Company;
+import phonebook.model.Person;
+import phonebook.model.Record;
 import phonebook.database.AddRecord;
 import phonebook.database.DeleteRecord;
 import phonebook.database.PhoneBookDataBase;
 import phonebook.errors.BadMenuPositionException;
-import phonebook.methods.Find;
-import phonebook.methods.IO;
-import phonebook.methods.ShowData;
+import phonebook.database.Find;
 
 import java.io.File;
 import java.util.InputMismatchException;
@@ -24,14 +22,15 @@ import java.util.Scanner;
 public class Menu {
     static Scanner sc = new Scanner(System.in);
 
-    public static void petla() {
+    public static void petla() throws InterruptedException {
         while (true) {
+            Thread.sleep(2000);
             ShowMenuAutomat2.MenuPozShowMenu();
             menuPositionAction();
         }
     }
 
-    public static void menuPositionAction() {
+    static void menuPositionAction() {
 
         String plik = (new File("").getAbsolutePath()+"\\src\\phonebook\\baza_pb.txt").toString();
         MenuPoz menuPoz = null;

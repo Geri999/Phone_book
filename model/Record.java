@@ -1,4 +1,4 @@
-package phonebook.classes;
+package phonebook.model;
 
 import phonebook.gui.MiniCSS;
 

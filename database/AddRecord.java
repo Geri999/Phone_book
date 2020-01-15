@@ -1,8 +1,8 @@
 package phonebook.database;
 
-import phonebook.classes.Company;
-import phonebook.classes.Person;
-import phonebook.classes.Record;
+import phonebook.gui.MiniCSS;
+import phonebook.model.Company;
+import phonebook.model.Person;
 
 import java.util.Scanner;
 
@@ -28,9 +28,11 @@ public class AddRecord {
             System.out.println("Nip");
             String nip = sc.nextLine();
 
-            PhoneBookDataBase.getPhoneBookDataBase().getRecordsArray()[Record.getIdMax()] =
-                    //IdMax jest zwiększony wcześnie o +1, a gdy baza pusta to ma wartość domyślną "0"
-                    new Company(type, address, landlinePhone, companyName, nip);
+            //IdMax jest zwiększony wcześnie o +1, a gdy baza pusta to ma wartość domyślną "0"
+            PhoneBookDataBase.getPhoneBookDataBase().getRecordsArray()
+                    .add(new Company(type, address, landlinePhone, companyName, nip));
+            System.out.println(MiniCSS.printOK("Rekord dodany "));
+
         }
         //String type, String address, String landlinePhone, String name, String surname, int mobile
         if (type.equals("Person")) {
@@ -45,8 +47,9 @@ public class AddRecord {
             System.out.println("Mobile (int!!):");
             int mobile = sc.nextInt();
 
-            PhoneBookDataBase.getPhoneBookDataBase().getRecordsArray()[Record.getIdMax()] =
-                    new Person(type, address,landlinePhone, name, surname, mobile);
+            PhoneBookDataBase.getPhoneBookDataBase().getRecordsArray()
+                    .add(new Person(type, address,landlinePhone, name, surname, mobile));
+            System.out.println(MiniCSS.printOK("Rekord dodany "));
         }
     }
 }

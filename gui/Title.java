@@ -50,7 +50,7 @@ public class Title {
                 "##        ##     ## ##     ## ##  #### ##             ##     ## ##     ## ##     ## ##  ##   \n" +
                 "##        ##     ## ##     ## ##   ### ##             ##     ## ##     ## ##     ## ##   ##  \n" +
                 "##        ##     ##  #######  ##    ## ########       ########   #######   #######  ##    ## (c) 2020 by GP\n" + MiniCSS.stop+ AppPhoneBook.VERSION);
-            Thread.sleep(1000);
+            //Thread.sleep(1000);
         }
 
     public static void user(String text) throws InterruptedException {
